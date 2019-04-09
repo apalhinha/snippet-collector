@@ -4,10 +4,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class LexTest_Nextsymbol {
+class LexTest {
 
 	@Test
-	void test() {
+	void testVersion() {
+		Lex a = new Lex();
+		assertEquals(1, a.numversion());
+	}
+
+	@Test
+	void testNextSymbol() {
 		Lex a = new Lex();
 		assertEquals("", a.nextsymbol());
 	
