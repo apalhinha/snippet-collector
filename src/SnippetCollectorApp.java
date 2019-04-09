@@ -1,9 +1,10 @@
+import info.trustzone.parser.Lex;
 
 public class SnippetCollectorApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Lex l = new Lex();	
+		System.out.println(l.numversion());
 	}
 
 }
