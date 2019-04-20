@@ -20,6 +20,7 @@ public class Lex {
 	public int setCrLf(int acode) throws CustomException {
 		Iterator i = pTokens.iterator();
 		while (i.hasNext()) {
+			
 			i.next();
 		}
 		return acode;
