@@ -1,19 +1,27 @@
 package info.trustzone.parser;
 
 public class Token {
-	private int pValue;
-	private String pString;
+	private String pRead;
+	private String pResult;
 	
-	Token( int aValue, String aString ) {
-		this.pValue = aValue;
-		this.pString = aString;
+	public Token( String aread, String aresult ) {
+		this.pRead = aread;
+		this.pResult = aresult;
 	}
 	
-	public int value() {
-		return this.pValue;
+	/**
+	 * Fixed name of a given token
+	 * @return The string that the parser will return upon finding the "read" string
+	 */
+	public String result() {
+		return this.pResult;
 	}
 	
-	public String string() {
-		return this.pString;
+	/**
+	 * Text string defining the text to be searched
+	 * @return The string that the parser should identify when reading
+	 */
+	public String read() {
+		return this.pRead;
 	}
 }

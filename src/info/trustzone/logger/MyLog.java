@@ -66,4 +66,10 @@ public class MyLog {
 		}
 	}
 	
+	public static void exceptionTop(Exception e, String message) {
+		try {
+			MyLog.exception(e, message);
+		} catch (Exception ex) {}
+	}
+	
 }
