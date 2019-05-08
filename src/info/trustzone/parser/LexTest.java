@@ -5,9 +5,37 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+//import info.trustzone.logger.AlreadyHandledException;
 import info.trustzone.logger.CustomException;
+import info.trustzone.logger.MyLog;
 
 class LexTest {
+	
+	@Test
+	void testInputFile() {
+		String res;
+		Lex l = new Lex("other");
+		try {
+			l.setToken("abc", "firstletters");
+			l.setCrLf("crlf");
+			l.setInputFile("test1.txt");
+			res=l.nextSymbol();
+			assertEquals("firstletters", res);
+			res=l.nextSymbol();
+			assertEquals("EOF", res);
+		} catch (Exception e) {
+			MyLog.exceptionTop(e, "Openning 'test1'");
+		}
+	}
+
+	@Test
+	void testInputFile_Missing() {
+		Lex l = new Lex("other");
+		assertThrows(Exception.class, ()->{
+			l.setInputFile("inexistent-file.txt");
+		});		
+		assertTrue(true);
+	}
 
 	@Test
 	void testParse_NameOtherToken() {

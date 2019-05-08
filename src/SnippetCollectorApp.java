@@ -1,5 +1,6 @@
 import info.trustzone.logger.MyLog;
 import info.trustzone.parser.Lex;
+import info.trustzone.parser.SampleString;
 
 public class SnippetCollectorApp {
 
@@ -7,6 +8,9 @@ public class SnippetCollectorApp {
 		Lex l = new Lex("other");	
 		String res;
 		System.out.println("version: " + l.numVersion());
+		
+		SampleString s1 = new SampleString("Aaa");
+		s1.CompareString();
 		
 		try {
 			l.setToken("one", "a1");

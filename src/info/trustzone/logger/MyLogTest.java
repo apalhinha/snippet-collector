@@ -1,6 +1,6 @@
 package info.trustzone.logger;
 
-import static org.junit.jupiter.api.Assertions.*;
+//import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 

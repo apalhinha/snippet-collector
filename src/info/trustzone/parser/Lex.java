@@ -1,11 +1,13 @@
 package info.trustzone.parser;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.regex.*;
 
 import info.trustzone.logger.CustomException;
 //import info.trustzone.logger.MyLog;
+import info.trustzone.logger.MyLog;
 
 public class Lex {
 	private String sInputString = "";
@@ -60,8 +62,8 @@ public class Lex {
 	/**
 	 * Same as setText, defines a string to be found. Internally the API will concatenate
 	 * 'not followed by letter or digit'. Use for straight tokens
-	 * @param astring String to be identified by the parser
-	 * @param acode Code to be returned whenever the string is found
+	 * @param aread String to be identified by the parser
+	 * @param aresult Code to be returned whenever the string is found
 	 * @return The code that was set (parameter)
 	 * @throws CustomException In case the code is already in use, or the string is already defined
 	 */
@@ -131,6 +133,14 @@ public class Lex {
 	public void setInputString(String astring) {
 		sInputString = astring;
 		pIndex = 0;
+	}
+	
+	public void setInputFile(String afile) throws Exception {
+		try {
+			sInputString = FilesLib.readFile(afile);
+		} catch (IOException e) {
+			MyLog.exception(e, "Opening file '" + afile + "'");
+		}
 	}
 	
 	public String getInput() {
