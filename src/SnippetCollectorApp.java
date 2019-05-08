@@ -1,6 +1,6 @@
 import info.trustzone.logger.MyLog;
 import info.trustzone.parser.Lex;
-import info.trustzone.parser.SampleString;
+import info.trustzone.samples.SampleString;
 
 public class SnippetCollectorApp {
 

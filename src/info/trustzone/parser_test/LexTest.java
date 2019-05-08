@@ -1,4 +1,4 @@
-package info.trustzone.parser;
+package info.trustzone.parser_test;
 
 //import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.*;
@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 //import info.trustzone.logger.AlreadyHandledException;
 import info.trustzone.logger.CustomException;
 import info.trustzone.logger.MyLog;
+import info.trustzone.parser.Lex;
 
 class LexTest {
 	

@@ -1,4 +1,4 @@
-package info.trustzone.parser;
+package info.trustzone.samples;
 
 public class SampleString {
 	String s1;
@@ -15,7 +15,7 @@ public class SampleString {
 		System.out.println("\"bbb\" compareTo \"a\" :" + "bbb".compareTo("a"));
 		
 //		"a" compareTo "bbb" :-1
-//		"a" compareTo "a"   :0
+//		"a" compareTo "as"   :0
 //		"bbb" compareTo "a" :1
 	}
 }

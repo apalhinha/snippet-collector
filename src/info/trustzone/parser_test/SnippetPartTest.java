@@ -1,10 +1,12 @@
-package info.trustzone.parser;
+package info.trustzone.parser_test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Iterator;
 
 import org.junit.jupiter.api.Test;
+
+import info.trustzone.parser.SnippetPart;
 
 class SnippetPartTest {
 
