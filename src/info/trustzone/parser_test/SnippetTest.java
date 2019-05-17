@@ -10,6 +10,16 @@ import info.trustzone.parser.SnippetPart;
 class SnippetTest {
 
 	@Test
+	void testSnippetName() {
+		Snippet snippet = new Snippet();
+		snippet.name="name";
+		snippet.group="group";
+		
+		assertEquals("name", snippet.name);
+		assertEquals("group", snippet.group);
+	}
+
+	@Test
 	void testSnippetSnippetPart() {
 		SnippetPart snippetPart = new SnippetPart("one");
 		Snippet snippet = new Snippet(snippetPart);

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 public class Snippet {
 		private ArrayList<SnippetPart> pList = new ArrayList<SnippetPart>();
+		public String name;
+		public String group;
 		
 		public Snippet (SnippetPart apart) {
 			pList.add(apart);
